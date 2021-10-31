@@ -20,35 +20,33 @@ input {
   height: 120px;
   width: 445px;
   background-color: #d0e6a8;
-  color: #4E4D4A;
+  color: #4e4d4a;
   font-size: 82px;
 }
-.containerButtons{
+.containerButtons {
   display: flex;
 }
-
 /*Botones general*/
-.Buttons{
+.Buttons {
   font-family: Calculator;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 56px;
   height: 90px;
   width: 90px;
   margin: 12px;
 }
 /* propiedades numeros */
-.numpropiedades{
-  
+.numpropiedades {
 }
 /*Botones de numeros*/
-.numeros{
+.numeros {
   background-color: #808080;
 }
 /*Botones de Menu*/
-.igual{
-  background-color: #EA5E61;
+.igual {
+  background-color: #ea5e61;
   width: 190px;
 }
-.menues{
-  background-color: #65C7D0;
+.menues {
+  background-color: #65c7d0;
 }
