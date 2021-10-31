@@ -7,13 +7,38 @@ function App() {
   const [restar, setRestar] = useState(false);
   const [dividir, setDividir] = useState(false);
   const [multiplicar, setMultiplicar] = useState(false);
+  const [resultado, setResultado] = useState("0");
 
+  // Operadores aritmeticos
+  const sumarfunc = () => {
+    if (pantalla !== 0 && sumar === false) {
+      setResultado(resultado + pantalla);
+      setSumar(true);
+      setPantalla("0");
+    } else if (pantalla !== 0 && sumar === true) {
+      funcResultado();
+    }
+  };
+
+  //Resultado
+  const funcResultado = () => {
+    setPantalla(resultado);
+    setSumar(false);
+  };
+
+  // Reinicar pantalla
   const reiniciar = () => {
     setPantalla("0");
   };
 
+  //Los numeros que estan en pantalla se cambian
+  const handlerpantalla = (e) => {
+    setPantalla(e.target.value);
+  };
+
+  // Cargar numeros a la pantalla
   const num0 = () => {
-    if (pantalla != "0") setPantalla(pantalla + "0");
+    if (pantalla !== "0") setPantalla(pantalla + "0");
   };
   const num7 = () => {
     if (pantalla === "0") setPantalla(7);
@@ -58,7 +83,12 @@ function App() {
       <main className="calculadora-body">
         {/* pantalla de la calculadora */}
         <div>
-          <input value={pantalla} />
+          <input
+            onChange={(e) => {
+              handlerpantalla(e);
+            }}
+            value={pantalla}
+          />
         </div>
 
         {/* Botones de la calculadora */}
@@ -155,9 +185,23 @@ function App() {
               0
             </button>
             <button className="Buttons numeros">.</button>
-            <button className="Buttons menues">+</button>
+            <button
+              onClick={() => {
+                sumarfunc();
+              }}
+              className="Buttons menues"
+            >
+              +
+            </button>
             <button className="Buttons menues">-</button>
-            <button className="Buttons igual numpropiedades">=</button>
+            <button
+              onClick={() => {
+                funcResultado();
+              }}
+              className="Buttons igual"
+            >
+              =
+            </button>
           </div>
         </div>
       </main>
