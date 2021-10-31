@@ -1,0 +1,54 @@
+/*Font https://www.dafont.com/es/calculator.font*/
+@font-face {
+  font-family: Calculator;
+  src: url(font/Calculator.ttf);
+}
+.App {
+  text-align: center;
+  font-family: Calculator;
+}
+.calculadora-body {
+  margin: auto;
+  max-width: 530px;
+  width: 100%;
+  background: #4d4d4d;
+  border-radius: 10%;
+}
+input {
+  font-family: Calculator;
+  margin-top: 45px;
+  height: 120px;
+  width: 445px;
+  background-color: #d0e6a8;
+  color: #4E4D4A;
+  font-size: 82px;
+}
+.containerButtons{
+  display: flex;
+}
+
+/*Botones general*/
+.Buttons{
+  font-family: Calculator;
+  color: #FFFFFF;
+  font-size: 56px;
+  height: 90px;
+  width: 90px;
+  margin: 12px;
+}
+/* propiedades numeros */
+.numpropiedades{
+  
+}
+/*Botones de numeros*/
+.numeros{
+  background-color: #808080;
+}
+/*Botones de Menu*/
+.igual{
+  background-color: #EA5E61;
+  width: 190px;
+}
+.menues{
+  background-color: #65C7D0;
+}
